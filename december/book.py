@@ -15,7 +15,7 @@ class Book(Publisher):
 
 class Python(Book):
     def __init__(self, name, title, author, price, no_of_pages):
-        super().__init__(name, title, author) 
+        super().__init__(name, title, author)
         self.price = price
         self.no_of_pages = no_of_pages
 
@@ -27,5 +27,13 @@ class Python(Book):
         print(f"Pages : {self.no_of_pages}")
 
 
-b1 = Python("TMH", "Python for Beginners", "Peter", "Rs.350", 173)
+# Taking user input
+publisher_name = input("Enter the Publisher Name: ")
+book_title = input("Enter the Book Title: ")
+book_author = input("Enter the Book Author: ")
+book_price = input("Enter the Book Price: ")
+book_pages = int(input("Enter the Number of Pages: "))
+
+# Creating an instance and showing details
+b1 = Python(publisher_name, book_title, book_author, book_price, book_pages)
 b1.show_Details()
