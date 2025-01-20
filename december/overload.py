@@ -6,10 +6,10 @@ class Rectangle:
     def __str__(self):
         return "This is class Rectangle"
 
-    def set_length(self, len=1.0):  # len=1 --> default value
+    def set_length(self, len=1.0):  # Default value len=1.0
         self.__length = len
 
-    def set_width(self, wid=1.0):  # wid=1 --> default value
+    def set_width(self, wid=1.0):  # Default value wid=1.0
         self.__width = wid
 
     def get_length(self):
@@ -28,19 +28,23 @@ class Rectangle:
             return "2nd Rectangle is Smaller."
 
 
-# Create first rectangle instance
+# Create first rectangle instance with user input
 my_rect1 = Rectangle()
-my_rect1.set_length(4.0)
-my_rect1.set_width(2.0)
+length1 = float(input("Enter the length of the first rectangle: "))
+width1 = float(input("Enter the width of the first rectangle: "))
+my_rect1.set_length(length1)
+my_rect1.set_width(width1)
 print("The length is ", my_rect1.get_length())
 print("The width is  ", my_rect1.get_width())
 print("The area is   ", my_rect1.get_area())
 print(my_rect1)
 
-# Create second rectangle instance
+# Create second rectangle instance with user input
 my_rect2 = Rectangle()
-my_rect2.set_length(5.0)
-my_rect2.set_width(3.0)
+length2 = float(input("Enter the length of the second rectangle: "))
+width2 = float(input("Enter the width of the second rectangle: "))
+my_rect2.set_length(length2)
+my_rect2.set_width(width2)
 print("The length is ", my_rect2.get_length())
 print("The width is  ", my_rect2.get_width())
 print("The area is   ", my_rect2.get_area())
